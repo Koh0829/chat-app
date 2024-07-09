@@ -14,3 +14,5 @@
 
 1. `node main.mjs` で実行する
 2. `http://localhost:3000/` を開く
+
+## supabase pass vpuZ0cpsG4Ohabeh
