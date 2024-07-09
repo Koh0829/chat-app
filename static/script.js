@@ -5,3 +5,8 @@ setInterval(() => {
     window.location.reload();
   }
 }, 5 * 1000);
+
+const submitButton = document.getElementById("submit");
+messageInput.oninput = () => {
+  submitButton.disabled = messageInput.value === "";
+};
