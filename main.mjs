@@ -2,6 +2,7 @@ import fs from "node:fs";
 import express from "express";
 import { PrismaClient } from "@prisma/client";
 import escapeHTML from "escape-html";
+import { emojify } from "node-emoji";
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
@@ -20,7 +21,7 @@ app.get("/", async (request, response) => {
 
 app.post("/send", async (request, response) => {
   await prisma.post.create({
-    data: { message: request.body.message },
+    data: { message: emojify(request.body.message) },
   });
   response.redirect("/");
 });
