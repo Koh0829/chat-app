@@ -13,7 +13,7 @@ app.get("/", async (request, response) => {
   const posts = await prisma.post.findMany();
   const html = template.replace(
     "<!-- posts -->",
-    posts.map((post) => `<li>${escapeHTML(post.message)}</li>`).join(""),
+    posts.map((post) => `<li>${escapeHTML(post.message)}<li>`).join(""),
   );
   response.send(html);
 });

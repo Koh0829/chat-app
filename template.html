@@ -3,16 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <title>チャット</title>
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <h1 class="app-title">チャット</h1>
-    <ul>
+    <ul class="posts">
       <!-- posts -->
     </ul>
-    <form action="/send" method="post">
-      <input id="message-input" type="text" name="message" />
-      <button type="submit">送信</button>
+    <form class="message-bar" action="/send" method="post">
+      <input class="message-input" type="text" name="message" />
+      <button class="button" type="submit">送信</button>
     </form>
     <script src="/script.js"></script>
   </body>
